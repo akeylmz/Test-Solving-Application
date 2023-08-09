@@ -43,6 +43,6 @@ Contributions are welcome! If you encounter any issues or have suggestions for i
 The Test Solver Application was developed by Ahmet Kemal Yılmaz. 
 
 ## Contact
-For any inquiries or feedback, please contact a.kylmz12@gmail.com.
+For any inquiries or feedback, please contact ahmetkemalyilmaz1@gmail.com.
 
 
