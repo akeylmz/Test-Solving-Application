@@ -14,37 +14,37 @@ public class LoginPage extends JFrame {
     private final String usersFile = "students.txt";
 
     public LoginPage() {
-        // Frame özelliklerini ayarla
-        setTitle("Giriþ Sayfasý");
+        // Frame Ã¶zelliklerini ayarla
+        setTitle("Login Page");
         setSize(501, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setLayout(new FlowLayout());
 
-        // Admin giriþi
+        // Admin giriÃ¾i
         JPanel adminPanel = new JPanel();
         adminPanel.setLayout(new FlowLayout());
 
-        JLabel adminLabel = new JLabel("Admin Adý:");
+        JLabel adminLabel = new JLabel("Admin Name:");
         adminNameField = new JTextField(20);
-        JButton adminButton = new JButton("Admin Paneli");
+        JButton adminButton = new JButton("Admin Page");
 
         adminPanel.add(adminLabel);
         adminPanel.add(adminNameField);
         adminPanel.add(adminButton);
 
-        // Öðrenci giriþi
+        // Ã–Ã°renci giriÃ¾i
         JPanel studentPanel = new JPanel();
         studentPanel.setLayout(new FlowLayout());
 
-        JLabel studentLabel = new JLabel("Öðrenci Adý:");
+        JLabel studentLabel = new JLabel("Student Name:");
         studentNameField = new JTextField(20);
-        JButton studentButton = new JButton("Öðrenci Paneli");
+        JButton studentButton = new JButton("Student Page");
 
         studentPanel.add(studentLabel);
         studentPanel.add(studentNameField);
         studentPanel.add(studentButton);
 
-        // Elemanlarý frame'e ekle
+        // Elemanlari frame'e ekle
         getContentPane().add(adminPanel);
         getContentPane().add(studentPanel);
 
@@ -54,7 +54,7 @@ public class LoginPage extends JFrame {
                 if (isAdmin(adminName)) {
                     openAdminPanel(adminName);
                 } else {
-                    JOptionPane.showMessageDialog(LoginPage.this, "Bu kullanýcý kayýtlý deðil.", "Hata", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(LoginPage.this, "User can not found.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
@@ -65,12 +65,12 @@ public class LoginPage extends JFrame {
                 if (isStudent(studentName)) {
                     openStudentPanel(studentName);
                 } else {
-                    JOptionPane.showMessageDialog(LoginPage.this, "Bu kullanýcý kayýtlý deðil.", "Hata", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(LoginPage.this, "User can not found", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
 
-        // Frame'i görünür yap
+        // Frame'i gÃ¶rÃ¼nÃ¼r yap
         setVisible(true);
     }
 
