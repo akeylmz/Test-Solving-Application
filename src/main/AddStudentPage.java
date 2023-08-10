@@ -13,17 +13,17 @@ public class AddStudentPage extends JFrame {
     private final String usersFile = "students.txt";
 
     public AddStudentPage() {
-        // Frame özelliklerini ayarla
-        setTitle("Öðrenci Ekle");
+        // Frame Ã¶zelliklerini ayarla
+        setTitle("Add Student");
         setSize(300, 150);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new FlowLayout());
 
-        // Öðrenci ekleme paneli
+        // Add Student page
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
 
-        JLabel studentLabel = new JLabel("Öðrenci Adý:");
+        JLabel studentLabel = new JLabel("Student Name:");
         studentNameField = new JTextField(15);
         JButton addButton = new JButton("Ekle");
 
@@ -31,19 +31,19 @@ public class AddStudentPage extends JFrame {
         panel.add(studentNameField);
         panel.add(addButton);
 
-        // Elemanlarý frame'e ekle
+        // ElemanlarÃ½ frame'e ekle
         add(panel);
 
         addButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String studentName = studentNameField.getText();
                 addStudentToFile(studentName);
-                JOptionPane.showMessageDialog(AddStudentPage.this, "Öðrenci eklendi: " + studentName, "Bilgi", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(AddStudentPage.this, "Student Added: " + studentName, "Info", JOptionPane.INFORMATION_MESSAGE);
                 studentNameField.setText("");
             }
         });
 
-        // Frame'i görünür yap
+        // Frame'i gÃ¶rÃ¼nÃ¼r yap
         setVisible(true);
     }
 
