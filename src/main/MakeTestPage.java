@@ -26,20 +26,20 @@ public class MakeTestPage extends JFrame {
 
     private void initializeUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Test Oluþtur");
+        setTitle("Create Test");
         setSize(400, 300);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
         JPanel inputPanel = new JPanel(new GridLayout(4, 2));
 
-        JLabel aLabel = new JLabel("a Deðeri:");
+        JLabel aLabel = new JLabel("a Value:");
         aField = new JTextField();
-        JLabel bLabel = new JLabel("b Deðeri:");
+        JLabel bLabel = new JLabel("b Value:");
         bField = new JTextField();
-        JLabel nLabel = new JLabel("Soru Sayýsý (N):");
+        JLabel nLabel = new JLabel("Number of Questions (N):");
         nField = new JTextField();
-        JLabel tLabel = new JLabel("Süre (saniye):");
+        JLabel tLabel = new JLabel("Time (second):");
         tField = new JTextField();
 
         inputPanel.add(aLabel);
@@ -51,7 +51,7 @@ public class MakeTestPage extends JFrame {
         inputPanel.add(tLabel);
         inputPanel.add(tField);
 
-        JButton generateButton = new JButton("Test Oluþtur");
+        JButton generateButton = new JButton("Create Test");
 
         generateButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -101,7 +101,7 @@ public class MakeTestPage extends JFrame {
             ex.printStackTrace();
         }
 
-        JOptionPane.showMessageDialog(this, "Test oluþturuldu ve dosyaya kaydedildi.");
+        JOptionPane.showMessageDialog(this, "Test Created and saved to File.");
 
         dispose();
     }
