@@ -14,17 +14,17 @@ public class AdminPage extends JFrame {
 
     private void initializeUI(String adminName) {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Admin Paneli");
+        setTitle("Admin Page");
         setSize(400, 300);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        adminNameLabel = new JLabel("Hoþ Geldin " + adminName);
+        adminNameLabel = new JLabel("Welcome " + adminName);
         adminNameLabel.setHorizontalAlignment(JLabel.CENTER);
 
-        JButton createTestButton = new JButton("Test Oluþtur");
-        JButton addStudentButton = new JButton("Öðrenci Ekle");
-        JButton viewReportButton = new JButton("Rapor Oluþtur");
+        JButton createTestButton = new JButton("Create Test");
+        JButton addStudentButton = new JButton("Add Student");
+        JButton viewReportButton = new JButton("Create Report");
 
         createTestButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
