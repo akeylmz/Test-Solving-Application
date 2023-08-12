@@ -19,7 +19,7 @@ public class PastTests extends JFrame {
 
     private void initializeUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Geçmiþ Test Sonuçlarý");
+        setTitle("Past Tests Results");
         setSize(400, 300);
         setLocationRelativeTo(null);
 
@@ -33,10 +33,10 @@ public class PastTests extends JFrame {
         List<String[]> testResults = readTestResultsFromFile();
 
         DefaultTableModel model = new DefaultTableModel();
-        model.addColumn("Öðrenci");
-        model.addColumn("Doðru");
-        model.addColumn("Yanlýþ");
-        model.addColumn("Süre");
+        model.addColumn("Student");
+        model.addColumn("True");
+        model.addColumn("False");
+        model.addColumn("Time");
 
         for (String[] testData : testResults) {
             String testName = testData[0].trim();
