@@ -24,7 +24,7 @@ public class PrintReportPage extends JFrame {
     
     private void initializeUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Raporlama Ekraný");
+        setTitle("Report Page");
         setSize(800, 600);
         setLocationRelativeTo(null);
 
@@ -65,10 +65,10 @@ public class PrintReportPage extends JFrame {
 
     private void populateTable(List<Student> students) {
         tableModel = new DefaultTableModel();
-        tableModel.addColumn("Öðrenci Adý");
-        tableModel.addColumn("Doðru");
-        tableModel.addColumn("Yanlýþ");
-        tableModel.addColumn("Süre");
+        tableModel.addColumn("Student Name");
+        tableModel.addColumn("True");
+        tableModel.addColumn("False");
+        tableModel.addColumn("Time");
 
         for (Student student : students) {
             Object[] rowData = { student.getName(), student.getCorrectAnswers(), student.getWrongAnswers(), student.getTimeTaken() };
@@ -79,9 +79,9 @@ public class PrintReportPage extends JFrame {
     }
 
     private void generateReport() {
-        // Güncel raporu report.csv dosyasýna yazdýr
+        // GÃ¼ncel raporu report.csv dosyasÃ½na yazdÃ½r
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("report.csv"))) {
-            // Baþlýk satýrýný yazdýr
+            // BaÃ¾lÃ½k satÃ½rÃ½nÃ½ yazdÃ½r
             for (int i = 0; i < tableModel.getColumnCount(); i++) {
                 writer.write(tableModel.getColumnName(i));
                 if (i < tableModel.getColumnCount() - 1) {
@@ -90,7 +90,7 @@ public class PrintReportPage extends JFrame {
             }
             writer.newLine();
 
-            // Veri satýrlarýný yazdýr
+            // Veri satÃ½rlarÃ½nÃ½ yazdÃ½r
             for (int row = 0; row < tableModel.getRowCount(); row++) {
                 for (int column = 0; column < tableModel.getColumnCount(); column++) {
                     writer.write(tableModel.getValueAt(row, column).toString());
@@ -104,9 +104,7 @@ public class PrintReportPage extends JFrame {
             e.printStackTrace();
         }
 
-        // Grafik oluþturma iþlemini burada gerçekleþtirin
-        // chartPanel içine istediðiniz grafik türünü yerleþtirin
-        // Örneðin: chartPanel.add(new JLabel("Grafik"));
+    
     }
 
     public static void main(String[] args) {
