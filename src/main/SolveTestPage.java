@@ -37,12 +37,12 @@ public class SolveTestPage extends JFrame {
 
     private void initializeUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Test Çözme Sayfasý");
+        setTitle("Test Solving Page");
         setSize(400, 300);
         setLocationRelativeTo(null);
         getContentPane().setLayout(new BorderLayout());
 
-        studentNameLabel = new JLabel("Öðrenci Adý: " + studentName);
+        studentNameLabel = new JLabel("Student Name: " + studentName);
         studentNameLabel.setHorizontalAlignment(JLabel.CENTER);
 
         getContentPane().add(studentNameLabel, BorderLayout.NORTH);
@@ -54,7 +54,7 @@ public class SolveTestPage extends JFrame {
         timeLabel = new JLabel();
         timeLabel.setBounds(150, 10, 100, 30);
 
-        JButton nextButton = new JButton("Cevapla");
+        JButton nextButton = new JButton("Answer");
         nextButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 checkAnswer();
@@ -98,7 +98,7 @@ public class SolveTestPage extends JFrame {
             e.printStackTrace();
         } catch (NumberFormatException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Geçersiz veri formatý. Dosyayý kontrol edin.");
+            JOptionPane.showMessageDialog(this, "Invalid data format. Check the file.");
             System.exit(0);
         }
     }
@@ -107,7 +107,7 @@ public class SolveTestPage extends JFrame {
         if (currentQuestionIndex < questions.size()) {
             String question = questions.get(currentQuestionIndex);
             testLabel.setText(question);
-            timeLabel.setText("Kalan Süre: " + timeLimit + " saniye");
+            timeLabel.setText("Remaining Time: " + timeLimit + " minute");
             currentQuestionIndex++;
         } else {
             endTest();
@@ -115,7 +115,7 @@ public class SolveTestPage extends JFrame {
     }
 
     private void checkAnswer() {
-        String userAnswer = JOptionPane.showInputDialog(this, "Cevabýnýzý girin:");
+        String userAnswer = JOptionPane.showInputDialog(this, "Enter the Answer:");
 
         if (userAnswer != null && !userAnswer.isEmpty()) {
             String correctAnswer = answers.get(currentQuestionIndex - 1);
@@ -134,7 +134,7 @@ public class SolveTestPage extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 timeLimit--;
                 totalTimeElapsed++;
-                timeLabel.setText("Kalan Süre: " + timeLimit + " sn");
+                timeLabel.setText("Kalan SÃ¼re: " + timeLimit + " sn");
                 if (timeLimit <= 0) {
                     timer.stop();
                     endTest();
@@ -146,13 +146,13 @@ public class SolveTestPage extends JFrame {
 
     private void endTest() {
         timer.stop();
-        String message = "Test tamamlandý!\n\n";
-        message += "Doðru Sayýsý: " + correctCount + "\n";
-        message += "Yanlýþ Sayýsý: " + wrongCount + "\n";
-        message += "Geçen Süre: " + totalTimeElapsed + " saniye";
+        String message = "Test tamamlandÃ½!\n\n";
+        message += "DoÃ°ru SayÃ½sÃ½: " + correctCount + "\n";
+        message += "YanlÃ½Ã¾ SayÃ½sÃ½: " + wrongCount + "\n";
+        message += "GeÃ§en SÃ¼re: " + totalTimeElapsed + " saniye";
         JOptionPane.showMessageDialog(this, message);
 
-        // Geçmiþ test sonuçlarýný dosyaya yazma
+        // GeÃ§miÃ¾ test sonuÃ§larÃ½nÃ½ dosyaya yazma
         writeTestResultToFile(studentName, correctCount, wrongCount, totalTimeElapsed);
 
         System.exit(0);
@@ -180,7 +180,7 @@ public class SolveTestPage extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new SolveTestPage("Öðrenci").setVisible(true);
+                new SolveTestPage("Ã–Ã°renci").setVisible(true);
             }
         });
     }
