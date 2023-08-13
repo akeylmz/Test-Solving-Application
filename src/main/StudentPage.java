@@ -14,26 +14,26 @@ public class StudentPage extends JFrame {
 
     private void initializeUI(String studentName) {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Öðrenci Paneli");
+        setTitle("Student Page");
         setSize(400, 300);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        studentNameLabel = new JLabel("Hoþ Geldin " + studentName);
+        studentNameLabel = new JLabel("Welcome " + studentName);
         studentNameLabel.setHorizontalAlignment(JLabel.CENTER);
 
-        JButton viewPastTestsButton = new JButton("Geçmiþ Testler");
-        JButton practiceButton = new JButton("Alýþtýrma Yap");
+        JButton viewPastTestsButton = new JButton("Past Tests");
+        JButton practiceButton = new JButton("Sove Test");
 
         viewPastTestsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                openPastTests(studentName); // PastTests'i açmak için metod çaðrýsý
+                openPastTests(studentName); // PastTests'i aÃ§mak iÃ§in metod Ã§aÃ°rÃ½sÃ½
             }
         });
 
         practiceButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                openSolveTestPage(studentName); // SolveTestPage'i açmak için metod çaðrýsý
+                openSolveTestPage(studentName); // SolveTestPage'i aÃ§mak iÃ§in metod Ã§aÃ°rÃ½sÃ½
             }
         });
 
@@ -45,24 +45,24 @@ public class StudentPage extends JFrame {
         add(buttonPanel, BorderLayout.CENTER);
     }
 
-    // PastTests'i açan metod
+    // PastTests'i aÃ§an metod
     private void openPastTests(String studentName) {
         PastTests pastTests = new PastTests(studentName);
         pastTests.setVisible(true);
-        dispose(); // Öðrenci Paneli'ni kapat
+        dispose(); // Student Page'ni kapat
     }
 
-    // SolveTestPage'i açan metod
+    // SolveTestPage'i aÃ§an metod
     private void openSolveTestPage(String studentName) {
         SolveTestPage solveTestPage = new SolveTestPage(studentName);
         solveTestPage.setVisible(true);
-        dispose(); // Öðrenci Paneli'ni kapat
+        dispose(); // Student Page'ni kapat
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new StudentPage("Öðrenci").setVisible(true);
+                new StudentPage("Student").setVisible(true);
             }
         });
     }
