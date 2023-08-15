@@ -45,14 +45,14 @@ public class StudentPage extends JFrame {
         add(buttonPanel, BorderLayout.CENTER);
     }
 
-    // PastTests'i açan metod
+    // open PastTests
     private void openPastTests(String studentName) {
         PastTests pastTests = new PastTests(studentName);
         pastTests.setVisible(true);
         dispose(); // Student Page'ni kapat
     }
 
-    // SolveTestPage'i açan metod
+    // open SolveTestPage
     private void openSolveTestPage(String studentName) {
         SolveTestPage solveTestPage = new SolveTestPage(studentName);
         solveTestPage.setVisible(true);
