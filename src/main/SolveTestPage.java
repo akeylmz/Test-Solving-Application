@@ -152,7 +152,7 @@ public class SolveTestPage extends JFrame {
         message += "Geçen Süre: " + totalTimeElapsed + " saniye";
         JOptionPane.showMessageDialog(this, message);
 
-        // Geçmiþ test sonuçlarýný dosyaya yazma
+        // write result of past test to the file
         writeTestResultToFile(studentName, correctCount, wrongCount, totalTimeElapsed);
 
         System.exit(0);
