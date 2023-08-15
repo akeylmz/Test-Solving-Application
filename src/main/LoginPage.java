@@ -14,13 +14,13 @@ public class LoginPage extends JFrame {
     private final String usersFile = "students.txt";
 
     public LoginPage() {
-        // Frame özelliklerini ayarla
+        // set Frame Properties
         setTitle("Login Page");
         setSize(501, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setLayout(new FlowLayout());
 
-        // Admin giriþi
+        // Admin login
         JPanel adminPanel = new JPanel();
         adminPanel.setLayout(new FlowLayout());
 
@@ -32,7 +32,7 @@ public class LoginPage extends JFrame {
         adminPanel.add(adminNameField);
         adminPanel.add(adminButton);
 
-        // Öðrenci giriþi
+        // Student login
         JPanel studentPanel = new JPanel();
         studentPanel.setLayout(new FlowLayout());
 
@@ -70,7 +70,7 @@ public class LoginPage extends JFrame {
             }
         });
 
-        // Frame'i görünür yap
+        // Frame visible
         setVisible(true);
     }
 
