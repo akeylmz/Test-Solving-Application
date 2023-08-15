@@ -79,9 +79,9 @@ public class PrintReportPage extends JFrame {
     }
 
     private void generateReport() {
-        // Güncel raporu report.csv dosyasýna yazdýr
+        // Writes the current report to the report.csv file
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("report.csv"))) {
-            // Baþlýk satýrýný yazdýr
+            // write head
             for (int i = 0; i < tableModel.getColumnCount(); i++) {
                 writer.write(tableModel.getColumnName(i));
                 if (i < tableModel.getColumnCount() - 1) {
@@ -90,7 +90,7 @@ public class PrintReportPage extends JFrame {
             }
             writer.newLine();
 
-            // Veri satýrlarýný yazdýr
+            // write data
             for (int row = 0; row < tableModel.getRowCount(); row++) {
                 for (int column = 0; column < tableModel.getColumnCount(); column++) {
                     writer.write(tableModel.getValueAt(row, column).toString());
