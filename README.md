@@ -1,6 +1,8 @@
 # Test Solver Application
 
 ## Description
+I coded this project for final of OOP lesson at Yıldız Teknik Universty
+
 The Test Solver Application is a Java-based program that allows users to solve multiple-choice tests. It provides an interactive interface for students to answer questions, keeps track of their performance, and generates test reports.
 
 ## Features
