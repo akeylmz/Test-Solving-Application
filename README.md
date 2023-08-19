@@ -46,5 +46,6 @@ The Test Solver Application was developed by Ahmet Kemal Yılmaz.
 
 ## Contact
 For any inquiries or feedback, please contact ahmetkemalyilmaz1@gmail.com.
+Linkedin: https://www.linkedin.com/in/ahmet-kemal-y1lmaz/
 
 
