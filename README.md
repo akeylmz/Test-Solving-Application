@@ -42,7 +42,7 @@ The Test Solver Application is a Java-based program that allows users to solve m
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## Credits
-The Test Solver Application was developed by Ahmet Kemal Yılmaz. 
+The Test Solver Application was developed by Ahmet Kemal Yılmaz at 2023. 
 
 ## Contact
 For any inquiries or feedback, please contact ahmetkemalyilmaz1@gmail.com.
