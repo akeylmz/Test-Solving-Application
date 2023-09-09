@@ -71,6 +71,8 @@ public class AdminPage extends JFrame {
         dispose();
     }
 
+    
+    
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
