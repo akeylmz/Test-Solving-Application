@@ -14,13 +14,13 @@ public class LoginPage extends JFrame {
     private final String usersFile = "students.txt";
 
     public LoginPage() {
-        // set Frame Properties
+        // set Frame Properties.
         setTitle("Login Page");
         setSize(501, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setLayout(new FlowLayout());
 
-        // Admin login
+        // Admin login.
         JPanel adminPanel = new JPanel();
         adminPanel.setLayout(new FlowLayout());
 
