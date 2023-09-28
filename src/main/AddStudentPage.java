@@ -13,13 +13,13 @@ public class AddStudentPage extends JFrame {
     private final String usersFile = "students.txt";
 
     public AddStudentPage() {
-        // Set frame properties
+        // Set frame properties.
         setTitle("Add Student");
         setSize(300, 150);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new FlowLayout());
 
-        // Add Student page
+        // Add Student page.
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
 
